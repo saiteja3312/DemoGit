@@ -19,9 +19,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                // Here you could add deployment steps if needed
-                // For a simple Hello World app, deployment might involve copying files to a server
-                sh 'sudo cp index.html /root'
+                // Copy the file from GitHub to the Jenkins workspace
+                sh 'wget -O index.html https://github.com/saiteja3312/DemoGit.git'
+                
+                // Now you can manipulate the file in the workspace directory
+                // For example, you can copy it to another location
+                sh 'cp index.html /root'
             }
         }
     }
