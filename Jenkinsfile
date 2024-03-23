@@ -21,7 +21,7 @@ pipeline {
                 echo 'Deploying the application...'
                 // Here you could add deployment steps if needed
                 // For a simple Hello World app, deployment might involve copying files to a server
-                sh 'sudo cp index.html /home/ec2-user/vasanth'
+                sh 'sudo cp index.html /root'
             }
         }
     }
