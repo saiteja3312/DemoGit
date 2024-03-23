@@ -15,7 +15,7 @@ pipeline {
             steps {
                 // Here you could add deployment steps if needed
                 // For a simple Hello World app, deployment might involve copying files to a server
-                sh 'cp index.html /path/to/your/webserver/directory'
+                sh cp index.html /home/ec2-user/vasanth
             }
         }
     }
