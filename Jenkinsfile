@@ -1,31 +1,22 @@
 pipeline {
     agent any
-    
     stages {
         stage('Build') {
             steps {
-                echo 'Building the application...'
-                // Here you could add build steps if needed, like compiling code
+                echo 'Building...'
+                sh 'javac HelloWorld.java'
             }
         }
-        
         stage('Test') {
             steps {
-                echo 'Testing the application...'
-                // Here you could add test steps if needed
+                echo 'Testing...'
+                // Add commands to run tests here. For simplicity, we're just echoing.
             }
         }
-        
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
-                // Copy the file from GitHub to the Jenkins workspace
-                sh 'git clone https://github.com/saiteja3312/DemoGit.git'
-                
-                // Now you can manipulate the file in the workspace directory
-                // For example, you can copy it to another location
-                sh 'cd DemoGit'
-                sh 'sudo cp index.html /home/ec2-user/vasanth'
+                echo 'Deploying...'
+                // Add deployment commands here. For simplicity, we're just echoing.
             }
         }
     }
