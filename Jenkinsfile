@@ -25,7 +25,7 @@ pipeline {
                 // Now you can manipulate the file in the workspace directory
                 // For example, you can copy it to another location
                 sh 'cd DemoGit'
-                sh 'cp index.html /home/ec2-user/vasanth'
+                sh 'sudo cp index.html /home/ec2-user/vasanth'
             }
         }
     }
